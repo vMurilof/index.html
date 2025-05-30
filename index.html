@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Meu Site</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+
+      /* Fundo com imagem */
+      background-image: url('https://images3.memedroid.com/images/UPLOADED207/63fe8656f2b22.jpeg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      height: 100vh;
+      color: white;
+    }
+
+    h1 {
+      color: #fff;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    }
+
+    p {
+      color: #ddd;
+    }
+
+    img {
+      max-width: 300px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+    }
+
+    button {
+      padding: 15px 30px;
+      background-color: #E1306C;
+      border: none;
+      color: white;
+      cursor: pointer;
+      font-size: 18px;
+      border-radius: 30px;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #C13584;
+    }
+  </style>
+</head>
+<body>
+  <h1>Olá! Bem-vindo.</h1>
+  <p>site teste.</p>
+
+  <!-- Imagem principal -->
+  <img src="https://wallpapercave.com/wp/wp4647524.jpg" alt="Minha Imagem" />
+
+  <!-- Botão do Instagram -->
+  <button onclick="abrirInstagram()">Visitar meu Instagram</button>
+
+  <script>
+    function abrirInstagram() {
+      window.open("https://www.instagram.com/_murilov18/", "_blank");
+    }
+  </script>
+</body>
+</html>
