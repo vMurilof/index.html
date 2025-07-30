@@ -11,7 +11,6 @@
       padding: 20px;
       text-align: center;
 
-      /* Fundo com imagem nova */
       background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRW8tVmVwLZ6Fmp8biVgm_qcqdI67Mk_laaww&s');
       background-size: cover;
       background-repeat: no-repeat;
@@ -39,10 +38,21 @@
       border-radius: 30px;
       transition: background-color 0.3s ease;
       margin-top: 20px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     button:hover {
       background-color: #C13584;
+    }
+
+    .zap {
+      background-color: #25D366;
+    }
+
+    .zap:hover {
+      background-color: #1ebe5d;
     }
   </style>
 </head>
@@ -53,12 +63,20 @@
   <!-- Botão do Instagram -->
   <button onclick="abrirInstagram()">Visitar meu Instagram</button>
 
+  <!-- Botão do WhatsApp -->
+  <button class="zap" onclick="abrirWhatsApp()">Fale comigo no WhatsApp</button>
+
   <script>
     function abrirInstagram() {
       window.open("https://www.instagram.com/_murilov18/", "_blank");
     }
+
+    function abrirWhatsApp() {
+      window.open("https://wa.me/5585986528596", "_blank");
+    }
   </script>
 </body>
 </html>
+
 
 
