@@ -3,176 +3,107 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Convite de Aniversário – Vozão</title>
-  <meta name="description" content="Convite de aniversário com tema Ceará – clique para abrir o local no mapa e veja o dia da semana automaticamente." />
+  <title>Convite de Aniversário – Ceará SC</title>
   <style>
-    :root{
-      --preto:#0f0f10;--branco:#ffffff;--cinza:#e9e9e9;--destaque:#111111;--accent:#ffcc00;
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: repeating-linear-gradient(90deg, #000 0 70px, #fff 70px 140px);
+      color: #111;
     }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,"Noto Sans",sans-serif; 
-      color:var(--preto);
-      background:repeating-linear-gradient(90deg,#111 0 70px,#fff 70px 140px);
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
     }
-    .overlay{ 
-      position:fixed;inset:0; 
-      background:linear-gradient(180deg,rgba(0,0,0,.35),rgba(0,0,0,.35));
-      backdrop-filter:saturate(120%) blur(1px);
+    .card {
+      max-width: 700px;
+      width: 100%;
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 8px 25px rgba(0,0,0,.3);
+      overflow: hidden;
     }
-    .container{ 
-      position:relative;min-height:100%;display:grid;place-items:center;padding:24px;
+    header {
+      text-align: center;
+      background: #000;
+      color: #fff;
+      padding: 20px;
     }
-    .card{
-      width:min(780px,92vw); background:var(--branco); border-radius:24px; overflow:hidden;
-      box-shadow:0 15px 40px rgba(0,0,0,.25);
-      border:1px solid rgba(0,0,0,.08);
+    header img {
+      width: 100px;
+      display: block;
+      margin: 0 auto 10px;
     }
-    .top{
-      padding:28px 28px 16px; background:linear-gradient(135deg,#fff, #f6f6f6);
+    h1 {
+      margin: 10px 0;
+      font-size: 28px;
     }
-    .tag{display:inline-flex;gap:8px;align-items:center;font-weight:700;text-transform:uppercase;letter-spacing:.08em;font-size:.78rem;padding:8px 12px;border-radius:999px;border:1px solid #ddd;background:#fff}
-    .title{margin:12px 0 6px;font-size:clamp(28px,4.5vw,44px);line-height:1.1}
-    .subtitle{margin:0;color:#555}
-
-    .content{padding:22px 28px 28px;display:grid;gap:18px}
-
-    .info{
-      display:grid;gap:14px;grid-template-columns:1fr; 
+    .content {
+      padding: 20px;
+      text-align: center;
     }
-    .row{display:flex;gap:14px;flex-wrap:wrap}
-    .pill{display:inline-flex;align-items:center;gap:10px;padding:10px 14px;border-radius:14px;background:#f5f5f5;border:1px solid #e5e5e5}
-    .pill strong{font-size:.92rem}
-
-    .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:6px}
-    .btn{
-      appearance:none;border:none;cursor:pointer; text-decoration:none; 
-      display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:14px;font-weight:600;
-      background:var(--destaque);color:#fff;box-shadow:0 6px 16px rgba(0,0,0,.25);
-      transition:transform .08s ease, box-shadow .2s ease, opacity .2s ease;
+    .pill {
+      display: inline-block;
+      margin: 6px;
+      padding: 10px 15px;
+      border-radius: 20px;
+      background: #f5f5f5;
+      border: 1px solid #ddd;
     }
-    .btn:hover{transform:translateY(-1px);box-shadow:0 10px 22px rgba(0,0,0,.28)}
-    .btn.alt{background:#1f1f1f}
-    .btn.ghost{background:#fff;color:#111;border:1px solid #ddd;box-shadow:none}
-
-    .divider{height:1px;background:linear-gradient(90deg,transparent,#ddd,transparent);margin:4px 0}
-
-    .footer{padding:16px 28px 24px;color:#555;font-size:.95rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
-    .badge{
-      font-weight:700;border:1px dashed #bbb;border-radius:999px;padding:8px 12px;background:#fff
+    .btn {
+      display: inline-block;
+      margin: 10px 8px;
+      padding: 12px 18px;
+      border-radius: 12px;
+      background: #000;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.2s;
     }
-
-    .escudo{
-      width:60px;height:60px;border-radius:16px;display:grid;place-items:center;font-weight:900;color:#111;background:repeating-linear-gradient(90deg,#000 0 10px,#fff 10px 20px);border:2px solid #111;box-shadow:inset 0 0 0 2px #fff;
+    .btn:hover {
+      background: #333;
     }
-    .strip{height:6px;background:repeating-linear-gradient(90deg,#000 0 20px,#fff 20px 40px)}
-
-    @media (min-width:720px){
-      .info{grid-template-columns:1fr 1fr}
+    footer {
+      background: #f0f0f0;
+      padding: 15px;
+      text-align: center;
+      font-size: 14px;
+      color: #555;
     }
   </style>
 </head>
 <body>
-  <div class="overlay"></div>
   <div class="container">
-    <article class="card" role="main" aria-labelledby="titulo">
-      <div class="strip" aria-hidden="true"></div>
-      <header class="top">
-        <span class="tag"><span class="escudo" aria-hidden="true">C</span> Aniversário do Vozão ✨</span>
-        <h1 class="title" id="titulo">Você é meu convidado!</h1>
-        <p class="subtitle">Vai rolar festa em clima de Ceará – preto e branco na veia! 🖤🤍</p>
+    <div class="card">
+      <header>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Cear%C3%A1_Sporting_Club_logo.svg/1200px-Cear%C3%A1_Sporting_Club_logo.svg.png" alt="Ceará SC">
+        <h1>Convite de Aniversário</h1>
+        <p>🎉 Você está convidado para comemorar o aniversário de <strong>Milton Barros</strong>! 🖤🤍</p>
       </header>
 
       <div class="content">
-        <section class="info">
-          <div>
-            <h2 style="margin:0 0 6px">Quando</h2>
-            <div class="row">
-              <span class="pill" title="Data"><strong>Data:</strong> <span id="data-br"></span></span>
-              <span class="pill" title="Dia da semana"><strong>Dia:</strong> <span id="dia-semana"></span></span>
-              <span class="pill" title="Hora"><strong>Hora:</strong> <span id="hora"></span></span>
-            </div>
-          </div>
-          <div>
-            <h2 style="margin:0 0 6px">Onde</h2>
-            <div class="row">
-              <span class="pill" title="Endereço"><strong>Endereço:</strong> <span id="endereco-texto"></span></span>
-              <span class="pill" title="Cidade"><strong>Cidade:</strong> <span id="cidade"></span></span>
-            </div>
-            <div class="cta">
-              <a id="btn-mapa" class="btn" target="_blank" rel="noopener" href="#">Ver local no mapa</a>
-              <button class="btn alt" id="btn-copiar" type="button">Copiar endereço</button>
-              <a id="btn-whatsapp" class="btn ghost" target="_blank" rel="noopener" href="#">Confirmar presença</a>
-            </div>
-          </div>
-        </section>
-        
-        <div class="divider"></div>
+        <h2>Detalhes da Festa</h2>
+        <div>
+          <span class="pill"><strong>Data:</strong> 20/09/2025</span>
+          <span class="pill"><strong>Hora:</strong> 19h00</span>
+          <span class="pill"><strong>Local:</strong> Rua Exemplo, 123 - Centro</span>
+          <span class="pill"><strong>Cidade:</strong> Fortaleza - CE</span>
+        </div>
 
-        <section>
-          <h2 style="margin:0 0 8px">Recado</h2>
-          <p style="margin:0;color:#333">Chega com o manto alvinegro e a alegria lá em cima! Vai ter música, bolo e aquele clima massa. Tua presença faz a diferença! 🎉</p>
-        </section>
+        <div>
+          <a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Rua+Exemplo%2C+123+-+Centro%2C+Fortaleza+-+CE">📍 Ver no mapa</a>
+          <a class="btn" target="_blank" href="https://wa.me/5585987919143?text=Ol%C3%A1!%20Confirmo%20minha%20presen%C3%A7a%20no%20anivers%C3%A1rio%20de%20Milton%20Barros!">✅ Confirmar presença</a>
+        </div>
       </div>
 
-      <footer class="footer">
-        <span class="badge">#PraCimaVozão</span>
-        <small>Convite digital – compartilhe com a família e os amigos.</small>
+      <footer>
+        #PraCimaVozão | Convite digital – compartilhe com a família e os amigos 🎉
       </footer>
-      <div class="strip" aria-hidden="true"></div>
-    </article>
+    </div>
   </div>
-
-  <script>
-    // ====== PERSONALIZE AQUI ======
-    // Coloque seus dados nas variáveis abaixo
-    const NOME_ANIVERSARIANTE = "Murilo"; // seu nome
-    const DATA_ISO = "2025-09-20T19:00:00-03:00"; // data e hora do evento (formato ISO)
-    const ENDERECO = "Rua Exemplo, 123 - Bairro Centro"; // endereço
-    const CIDADE = "Fortaleza - CE"; // cidade/UF
-    const LINK_GOOGLE_MAPS = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(ENDERECO + ', ' + CIDADE)}`;
-    const WHATSAPP_NUM = "+5585XXXXXXXX"; // coloque seu número com DDI/DDD
-    // Mensagem padrão para confirmar presença (edite se quiser)
-    const MSG_WPP = `Olá! Confirmo presença no aniversário de ${NOME_ANIVERSARIANTE} no dia ${new Date(DATA_ISO).toLocaleDateString('pt-BR')}.`;
-    // ===============================
-
-    // Preenche textos
-    document.getElementById('endereco-texto').textContent = ENDERECO;
-    document.getElementById('cidade').textContent = CIDADE;
-
-    const data = new Date(DATA_ISO);
-    const dataBR = data.toLocaleDateString('pt-BR', { day:'2-digit', month:'long', year:'numeric' });
-    const diaSemana = data.toLocaleDateString('pt-BR', { weekday:'long' });
-    const hora = data.toLocaleTimeString('pt-BR', { hour:'2-digit', minute:'2-digit' });
-
-    document.getElementById('data-br').textContent = dataBR;
-    document.getElementById('dia-semana').textContent = diaSemana;
-    document.getElementById('hora').textContent = hora.replace(':', 'h');
-
-    // Botões
-    const btnMapa = document.getElementById('btn-mapa');
-    btnMapa.href = LINK_GOOGLE_MAPS;
-
-    const btnWpp = document.getElementById('btn-whatsapp');
-    const linkWpp = `https://wa.me/${WHATSAPP_NUM.replace(/\D/g,'')}?text=${encodeURIComponent(MSG_WPP)}`;
-    btnWpp.href = linkWpp;
-
-    document.getElementById('btn-copiar').addEventListener('click', async () => {
-      const texto = `${ENDERECO}, ${CIDADE}`;
-      try{
-        await navigator.clipboard.writeText(texto);
-        const original = document.getElementById('btn-copiar').textContent;
-        document.getElementById('btn-copiar').textContent = 'Endereço copiado!';
-        setTimeout(()=>document.getElementById('btn-copiar').textContent = original, 1800);
-      }catch(e){
-        alert('Não foi possível copiar. Copie manualmente: ' + texto);
-      }
-    });
-
-    // Ajusta o título com o nome
-    const titulo = document.getElementById('titulo');
-    titulo.textContent = `${NOME_ANIVERSARIANTE} faz aniversário!`;
-  </script>
 </body>
 </html>
