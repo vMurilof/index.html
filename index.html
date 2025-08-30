@@ -1,53 +1,56 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Convite de Aniversário - Milton Barros</title>
   <style>
     body {
       margin: 0;
-      font-family: "Georgia", serif;
-      background: #f8f8f8;
+      font-family: "Times New Roman", serif;
+      background: #e9e9e9;
       color: #111;
-    }
-    .container {
       display: flex;
       justify-content: center;
       align-items: center;
       min-height: 100vh;
       padding: 20px;
     }
-    .carta {
-      max-width: 650px;
+    .convite {
+      max-width: 750px;
+      width: 100%;
       background: #fff;
-      border-radius: 12px;
+      border: 8px double #000;
       padding: 40px 30px;
-      box-shadow: 0 8px 30px rgba(0,0,0,0.15);
       text-align: center;
-      border: 4px solid #000;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.25);
     }
-    .carta img {
-      width: 120px;
+    .convite img {
+      width: 140px;
       margin-bottom: 20px;
     }
     h1 {
-      font-size: 28px;
-      margin-bottom: 10px;
+      font-size: 32px;
+      margin: 10px 0;
+      font-weight: bold;
       color: #000;
     }
     p {
-      font-size: 18px;
+      font-size: 20px;
       line-height: 1.6;
-      margin: 10px 0;
+      margin: 12px 0;
+    }
+    .nome {
+      font-size: 26px;
+      font-weight: bold;
+      color: #000;
     }
     .info {
-      margin: 20px 0;
-      font-size: 18px;
+      margin: 30px 0;
+      font-size: 20px;
     }
-    .info strong {
-      display: inline-block;
-      width: 80px;
+    .info p {
+      margin: 6px 0;
     }
     .btns {
       margin-top: 25px;
@@ -55,11 +58,12 @@
     .btn {
       display: inline-block;
       margin: 8px;
-      padding: 12px 18px;
-      border-radius: 8px;
+      padding: 12px 20px;
+      border-radius: 6px;
       background: #000;
       color: #fff;
       text-decoration: none;
+      font-size: 18px;
       font-weight: bold;
       transition: 0.2s;
     }
@@ -67,40 +71,38 @@
       background: #444;
     }
     footer {
-      margin-top: 30px;
-      font-size: 14px;
-      color: #555;
-      border-top: 1px solid #ddd;
-      padding-top: 15px;
+      margin-top: 35px;
+      font-size: 16px;
+      color: #333;
+      border-top: 1px solid #ccc;
+      padding-top: 12px;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="carta">
-      <!-- Logo oficial do Ceará -->
-      <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Cear%C3%A1_Sporting_Club_logo.svg" alt="Ceará SC">
+  <div class="convite">
+    <!-- Logo oficial do Ceará -->
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Cear%C3%A1_Sporting_Club_logo.svg/512px-Cear%C3%A1_Sporting_Club_logo.svg.png" alt="Ceará SC">
 
-      <h1>Convite Especial</h1>
-      <p>Com imensa alegria, convidamos você para a celebração do aniversário de</p>
-      <p><strong style="font-size:22px;">Milton Barros</strong></p>
+    <h1>Convite Especial</h1>
+    <p>Com grande alegria, tenho a honra de convidar você para celebrar o aniversário de</p>
+    <p class="nome">Milton Barros</p>
 
-      <div class="info">
-        <p><strong>Data:</strong> 20/09/2025</p>
-        <p><strong>Hora:</strong> 19h00</p>
-        <p><strong>Local:</strong> Rua Exemplo, 123 - Centro</p>
-        <p><strong>Cidade:</strong> Fortaleza - CE</p>
-      </div>
-
-      <div class="btns">
-        <a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Rua+Exemplo%2C+123+-+Centro%2C+Fortaleza+-+CE">📍 Ver no mapa</a>
-        <a class="btn" target="_blank" href="https://wa.me/5585987919143?text=Ol%C3%A1!%20Confirmo%20minha%20presen%C3%A7a%20no%20anivers%C3%A1rio%20de%20Milton%20Barros!">✅ Confirmar presença</a>
-      </div>
-
-      <footer>
-        Sua presença tornará este momento ainda mais especial. <br> 🖤🤍 #PraCimaVozão
-      </footer>
+    <div class="info">
+      <p><strong>Data:</strong> 20 de setembro de 2025</p>
+      <p><strong>Hora:</strong> 19h00</p>
+      <p><strong>Local:</strong> Rua Exemplo, 123 - Centro</p>
+      <p><strong>Cidade:</strong> Fortaleza - CE</p>
     </div>
+
+    <div class="btns">
+      <a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Rua+Exemplo%2C+123+-+Centro%2C+Fortaleza+-+CE">📍 Ver no mapa</a>
+      <a class="btn" target="_blank" href="https://wa.me/5585987919143?text=Ol%C3%A1!%20Confirmo%20minha%20presen%C3%A7a%20no%20anivers%C3%A1rio%20de%20Milton%20Barros!">✅ Confirmar presença</a>
+    </div>
+
+    <footer>
+      Sua presença tornará este momento ainda mais especial. <br> 🖤🤍 #PraCimaVozão
+    </footer>
   </div>
 </body>
 </html>
